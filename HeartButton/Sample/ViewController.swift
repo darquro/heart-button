@@ -23,14 +23,16 @@ class ViewController: UIViewController {
                 print("change state: is off")
             }
         }
+        
+        
     }
 
     @IBAction func didTapChangeStateWithAnimationButton(_ sender: Any) {
-        self.heartButton.changeState(isOn: !self.heartButton.isOn, animated: true)
+        self.heartButton.setOn(!self.heartButton.isOn, animated: true)
     }
     
     @IBAction func didTapChangeStateButton(_ sender: Any) {
-        self.heartButton.changeState(isOn: !self.heartButton.isOn, animated: false)
+        self.heartButton.setOn(!self.heartButton.isOn, animated: false)
     }
     
     override func didReceiveMemoryWarning() {
