@@ -8,13 +8,19 @@
 
 import UIKit
 
+// MARK: SwitchableButtonProtocol
+
 protocol SwitchableButtonProtocol {
     func switchableButtonOffLayer() -> CAShapeLayer
     func switchableButtonOnLayer() -> CAShapeLayer
 }
 
+// MARK: SwitchableButton
+
 @IBDesignable
 public class SwitchableButton: UIView {
+    
+    /// The off/on state.
     @IBInspectable public var isOn: Bool = false {
         didSet {
             if oldValue != self.isOn {
@@ -22,20 +28,41 @@ public class SwitchableButton: UIView {
             }
         }
     }
+
+    /// The value used to line width of off state shape.
     @IBInspectable public var offLineWidth: CGFloat = 3.0
+    
+    /// The color used to line stroke of off state shape.
     @IBInspectable public var offLineColor: UIColor = UIColor.black
+    
+    /// The color used to fill of off state shape.
     @IBInspectable public var offFillColor: UIColor = UIColor.clear
+    
+    /// The value used to line width of on state shape.
     @IBInspectable public var onLineWidth: CGFloat = 0
+    
+    /// The color used to line stroke of on state shape.
     @IBInspectable public var onLineColor: UIColor = UIColor.clear
+    
+    /// The color used to fill of on state shape.
     @IBInspectable public var onFillColor: UIColor = UIColor.red
     
+    /// The closure to handle when state changes.
     public var stateChanged: ((Any, Bool) -> Void)?
+    
+    /// The animation used to transitioning from on to off.
     public var offAnimations: [CAAnimation?] = [CASpringAnimation.expandScaleAnimation]
+    
+    /// The animation used to transitioning from off to on.
     public var onAnimations: [CAAnimation?] = [CASpringAnimation.expandScaleAnimation]
     
+    /// The reference of SwitchableButtonProtocol.
     internal var delegate: SwitchableButtonProtocol?
     
+    /// The off state layer.
     private var offLayer: CAShapeLayer?
+    
+    /// The on state layer.
     private var onLayer: CAShapeLayer?
     
     required public init?(coder aDecoder: NSCoder) {
@@ -48,12 +75,16 @@ public class SwitchableButton: UIView {
         self.setup()
     }
     
+    /// Setup view
     private func setup() {
         self.backgroundColor = UIColor.clear
-        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onTapHandler(gesture:))))
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(gesture:))))
     }
     
-    @objc private func onTapHandler(gesture: UITapGestureRecognizer) {
+    /// handle on tap gesture
+    ///
+    /// - Parameter gesture: tap gesture recognizer
+    @objc private func handleTapGesture(gesture: UITapGestureRecognizer) {
         if isOn {
             self.changeDisplayToOff(animated: true)
             self.isOn = false

@@ -22,6 +22,8 @@ public class HeartButton: SwitchableButton {
     }
 }
 
+// MARK: SwitchableButtonProtocol
+
 extension HeartButton: SwitchableButtonProtocol {
     
     func switchableButtonOffLayer() -> CAShapeLayer {
