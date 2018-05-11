@@ -18,13 +18,12 @@ class ViewController: UIViewController {
         
         self.heartButton.stateChanged = { sender, isOn in
             if isOn {
-                print("change state: is on")
+                // selected
             } else {
-                print("change state: is off")
+                // unselected
             }
+            print("change state isOn:\(isOn)")
         }
-        
-        
     }
 
     @IBAction func didTapChangeStateWithAnimationButton(_ sender: Any) {
