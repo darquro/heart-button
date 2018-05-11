@@ -10,6 +10,9 @@ import Foundation
 
 extension UIBezierPath {
     
+    /// Create heart path
+    ///
+    /// - Parameter rect: draw in the rect
     convenience init(heartIn rect: CGRect) {
         self.init()
         

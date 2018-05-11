@@ -10,7 +10,8 @@ import Foundation
 
 extension CASpringAnimation {
     
-    static var expandScaleAnimation: CASpringAnimation {
+    /// The Expansion and bouncing animation
+    static var expansionAndBouncingAnimation: CASpringAnimation {
         let anim = CASpringAnimation(keyPath: "transform.scale")
         anim.fromValue = 0.5
         anim.toValue = 1.0

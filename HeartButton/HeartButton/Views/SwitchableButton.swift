@@ -11,7 +11,15 @@ import UIKit
 // MARK: SwitchableButtonProtocol
 
 protocol SwitchableButtonProtocol {
+    
+    /// Returns the off state layer
+    ///
+    /// - Returns: The off state layer
     func switchableButtonOffLayer() -> CAShapeLayer
+    
+    /// Returns the on state layer
+    ///
+    /// - Returns: The on state layer
     func switchableButtonOnLayer() -> CAShapeLayer
 }
 
@@ -51,10 +59,10 @@ public class SwitchableButton: UIView {
     public var stateChanged: ((Any, Bool) -> Void)?
     
     /// The animation used to transitioning from on to off.
-    public var offAnimations: [CAAnimation?] = [CASpringAnimation.expandScaleAnimation]
+    public var offAnimations: [CAAnimation?] = [CASpringAnimation.expansionAndBouncingAnimation]
     
     /// The animation used to transitioning from off to on.
-    public var onAnimations: [CAAnimation?] = [CASpringAnimation.expandScaleAnimation]
+    public var onAnimations: [CAAnimation?] = [CASpringAnimation.expansionAndBouncingAnimation]
     
     /// The reference of SwitchableButtonProtocol.
     internal var delegate: SwitchableButtonProtocol?
@@ -64,6 +72,8 @@ public class SwitchableButton: UIView {
     
     /// The on state layer.
     private var onLayer: CAShapeLayer?
+    
+    // MARK: Initialize
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -112,6 +122,7 @@ public class SwitchableButton: UIView {
         }
         self.onLayer = onLayer
         
+        // Add sub layers
         if self.isOn {
             self.layer.addSublayer(offLayer)
             offLayer.isHidden = true
@@ -123,6 +134,13 @@ public class SwitchableButton: UIView {
         }
     }
     
+    // MARK: Public methods
+    
+    /// Set the state of the button to On or Off, optionally animating the transition.
+    ///
+    /// - Parameters:
+    ///   - isOn: true if the button should be turned to the On state, otherwise false.
+    ///   - animated: true to animate, otherwise false.
     public func setOn(_ isOn: Bool, animated: Bool) {
         self.isOn = isOn
         if isOn {
@@ -132,6 +150,11 @@ public class SwitchableButton: UIView {
         }
     }
     
+    // MARK: Changes The button display
+    
+    /// Change display to on state
+    ///
+    /// - Parameter animated: true to animate, otherwise false.
     private func changeDisplayToOn(animated: Bool) {
         onLayer?.isHidden = false
         switchLayer()
@@ -143,6 +166,10 @@ public class SwitchableButton: UIView {
         offLayer?.isHidden = true
     }
     
+    
+    /// Change display to off state
+    ///
+    /// - Parameter animated: true to animate, otherwise false.
     private func changeDisplayToOff(animated: Bool) {
         offLayer?.isHidden = false
         switchLayer()
@@ -154,6 +181,7 @@ public class SwitchableButton: UIView {
         onLayer?.isHidden = true
     }
     
+    /// Switch the order of sub layers
     private func switchLayer() {
         guard let sublayers = self.layer.sublayers,
             sublayers.count == 2,

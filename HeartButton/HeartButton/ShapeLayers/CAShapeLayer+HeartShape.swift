@@ -10,6 +10,13 @@ import Foundation
 
 extension CAShapeLayer {
     
+    /// Create heart shape layer
+    ///
+    /// - Parameters:
+    ///   - rect: draw in the rect
+    ///   - lineWidth: used to line width
+    ///   - lineColor: used to line color
+    ///   - fillColor: used to fill color
     convenience init(heartIn rect: CGRect,
                      lineWidth: CGFloat,
                      lineColor: UIColor,
