@@ -7,17 +7,17 @@
 
 Animating Heart button.
 
-<img src="./images/sample.gif">
+<img src="./images/sample.gif" width="320px">
 
 ## Usage
 
 1. Drag and drop UIView.
 
-   <img src="./images/screen_capture_1.png">
+   <img src="./images/screen_capture_1.png" width="640px">
 
 2. Set `HeartButton` to Class and Module fields.
 
-   <img src="./images/screen_capture_2.png">
+   <img src="./images/screen_capture_2.png" width="320px">
 
 3. Set the outlet and write the handling code.
 
@@ -45,7 +45,7 @@ Animating Heart button.
 
 You can change the design on the Storyboard.
 
-<img src="./images/screen_capture_3.png">
+<img src="./images/screen_capture_3.png" width="640px">
 
 Or You can change it programmatically.
 
