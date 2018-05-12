@@ -11,6 +11,24 @@ import UIKit
 @IBDesignable
 public class HeartButton: SwitchableButton {
     
+    /// The value used to line width of off state shape.
+    @IBInspectable public var offLineWidth: CGFloat = 3.0
+    
+    /// The color used to line stroke of off state shape.
+    @IBInspectable public var offLineColor: UIColor = UIColor.black
+    
+    /// The color used to fill of off state shape.
+    @IBInspectable public var offFillColor: UIColor = UIColor.clear
+    
+    /// The value used to line width of on state shape.
+    @IBInspectable public var onLineWidth: CGFloat = 0
+    
+    /// The color used to line stroke of on state shape.
+    @IBInspectable public var onLineColor: UIColor = UIColor.clear
+    
+    /// The color used to fill of on state shape.
+    @IBInspectable public var onFillColor: UIColor = UIColor(red:0.92, green:0.29, blue:0.35, alpha:1.0)
+    
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         super.delegate = self

@@ -36,24 +36,6 @@ public class SwitchableButton: UIView {
             }
         }
     }
-
-    /// The value used to line width of off state shape.
-    @IBInspectable public var offLineWidth: CGFloat = 3.0
-    
-    /// The color used to line stroke of off state shape.
-    @IBInspectable public var offLineColor: UIColor = UIColor.black
-    
-    /// The color used to fill of off state shape.
-    @IBInspectable public var offFillColor: UIColor = UIColor.clear
-    
-    /// The value used to line width of on state shape.
-    @IBInspectable public var onLineWidth: CGFloat = 0
-    
-    /// The color used to line stroke of on state shape.
-    @IBInspectable public var onLineColor: UIColor = UIColor.clear
-    
-    /// The color used to fill of on state shape.
-    @IBInspectable public var onFillColor: UIColor = UIColor.red
     
     /// The closure to handle when state changes.
     public var stateChanged: ((Any, Bool) -> Void)?
