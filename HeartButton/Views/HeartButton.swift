@@ -27,7 +27,7 @@ public class HeartButton: SwitchableButton {
     @IBInspectable public var onLineColor: UIColor = UIColor.clear
     
     /// The color used to fill of on state shape.
-    @IBInspectable public var onFillColor: UIColor = UIColor(red:0.92, green:0.29, blue:0.35, alpha:1.0)
+    @IBInspectable public var onFillColor: UIColor = UIColor(red: 0.92, green: 0.29, blue: 0.35, alpha: 1.0)
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

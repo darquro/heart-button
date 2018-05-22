@@ -9,7 +9,7 @@
 import Foundation
 
 extension UIBezierPath {
-    
+
     /// Create heart path
     ///
     /// - Parameter rect: draw in the rect
@@ -22,13 +22,20 @@ extension UIBezierPath {
         let arcRadius = sqrt(pow(sideOne, 2) + pow(sideTwo, 2)) / 2
         
         // Left Hand Curve
-        self.addArc(withCenter: CGPoint(x: rect.width * 0.3, y: rect.height * 0.35), radius: arcRadius, startAngle: 135.degreesToRadians, endAngle: 315.degreesToRadians, clockwise: true)
+        self.addArc(withCenter: CGPoint(x: rect.width * 0.3, y: rect.height * 0.35),
+                    radius: arcRadius,
+                    startAngle: 135.degreesToRadians,
+                    endAngle: 315.degreesToRadians,
+                    clockwise: true)
         
         // Top Centre Dip
         self.addLine(to: CGPoint(x: rect.width * 0.5, y: rect.height * 0.2))
         
         // Right Hand Curve
-        self.addArc(withCenter: CGPoint(x: rect.width * 0.7, y: rect.height * 0.35), radius: arcRadius, startAngle: 225.degreesToRadians, endAngle: 45.degreesToRadians, clockwise: true)
+        self.addArc(withCenter: CGPoint(x: rect.width * 0.7, y: rect.height * 0.35),
+                    radius: arcRadius,
+                    startAngle: 225.degreesToRadians,
+                    endAngle: 45.degreesToRadians, clockwise: true)
         
         // Right Bottom Line
         self.addLine(to: CGPoint(x: rect.width * 0.5, y: rect.height * 0.95))

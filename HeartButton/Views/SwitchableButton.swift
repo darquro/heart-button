@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: SwitchableButtonProtocol
 
-protocol SwitchableButtonProtocol {
+protocol SwitchableButtonProtocol: class {
     
     /// Returns the off state layer
     ///
@@ -47,7 +47,7 @@ public class SwitchableButton: UIView {
     public var onAnimations: [CAAnimation?] = [CASpringAnimation.expansionAndBouncingAnimation]
     
     /// The reference of SwitchableButtonProtocol.
-    internal var delegate: SwitchableButtonProtocol?
+    internal weak var delegate: SwitchableButtonProtocol?
     
     /// The off state layer.
     private var offLayer: CAShapeLayer?
@@ -147,7 +147,6 @@ public class SwitchableButton: UIView {
         }
         offLayer?.isHidden = true
     }
-    
     
     /// Change display to off state
     ///
