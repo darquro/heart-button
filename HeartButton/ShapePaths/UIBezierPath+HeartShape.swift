@@ -16,10 +16,10 @@ extension UIBezierPath {
     convenience init(heartIn rect: CGRect) {
         self.init()
         
-        let bottomCenter = CGPoint(x: rect.width * 0.5, y: rect.height * 0.95)
+        let bottomCenter = CGPoint(x: rect.width * 0.5, y: rect.height)
         let topCenter = CGPoint(x: rect.width * 0.5, y: rect.height * 0.25)
-        let leftSideControl = CGPoint(x: -(rect.width * 0.4), y: (rect.height * 0.45))
-        let leftTopControl = CGPoint(x: (rect.width * 0.25), y: -(rect.height * 0.15))
+        let leftSideControl = CGPoint(x: -(rect.width * 0.45), y: (rect.height * 0.45))
+        let leftTopControl = CGPoint(x: (rect.width * 0.25), y: -(rect.height * 0.2))
         let rightTopControl = CGPoint(x: rect.width - leftTopControl.x, y: leftTopControl.y)
         let rightSideControl = CGPoint(x: rect.width + (leftSideControl.x * -1), y: leftSideControl.y)
         
