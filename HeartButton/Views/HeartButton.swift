@@ -12,7 +12,7 @@ import UIKit
 public class HeartButton: SwitchableButton {
     
     /// The value used to line width of off state shape.
-    @IBInspectable public var offLineWidth: CGFloat = 3.0
+    @IBInspectable public var offLineWidth: CGFloat = 2.0
     
     /// The color used to line stroke of off state shape.
     @IBInspectable public var offLineColor: UIColor = UIColor.black

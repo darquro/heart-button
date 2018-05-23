@@ -16,31 +16,25 @@ extension UIBezierPath {
     convenience init(heartIn rect: CGRect) {
         self.init()
         
-        // Calculate Radius of Arcs using Pythagoras
-        let sideOne = rect.width * 0.4
-        let sideTwo = rect.height * 0.3
-        let arcRadius = sqrt(pow(sideOne, 2) + pow(sideTwo, 2)) / 2
+        let bottomCenter = CGPoint(x: rect.width * 0.5, y: rect.height * 0.95)
+        let topCenter = CGPoint(x: rect.width * 0.5, y: rect.height * 0.25)
+        let leftSideControl = CGPoint(x: -(rect.width * 0.4), y: (rect.height * 0.45))
+        let leftTopControl = CGPoint(x: (rect.width * 0.25), y: -(rect.height * 0.15))
+        let rightTopControl = CGPoint(x: rect.width - leftTopControl.x, y: leftTopControl.y)
+        let rightSideControl = CGPoint(x: rect.width + (leftSideControl.x * -1), y: leftSideControl.y)
         
-        // Left Hand Curve
-        self.addArc(withCenter: CGPoint(x: rect.width * 0.3, y: rect.height * 0.35),
-                    radius: arcRadius,
-                    startAngle: 135.degreesToRadians,
-                    endAngle: 315.degreesToRadians,
-                    clockwise: true)
+        self.move(to: bottomCenter)
         
-        // Top Centre Dip
-        self.addLine(to: CGPoint(x: rect.width * 0.5, y: rect.height * 0.2))
+        // Left Side Curve
+        self.addCurve(to: topCenter,
+                      controlPoint1: leftSideControl,
+                      controlPoint2: leftTopControl)
         
-        // Right Hand Curve
-        self.addArc(withCenter: CGPoint(x: rect.width * 0.7, y: rect.height * 0.35),
-                    radius: arcRadius,
-                    startAngle: 225.degreesToRadians,
-                    endAngle: 45.degreesToRadians, clockwise: true)
+        // Right Side Curve
+        self.addCurve(to: bottomCenter,
+                      controlPoint1: rightTopControl,
+                      controlPoint2: rightSideControl)
         
-        // Right Bottom Line
-        self.addLine(to: CGPoint(x: rect.width * 0.5, y: rect.height * 0.95))
-        
-        // Left Bottom Line
         self.close()
     }
 }
