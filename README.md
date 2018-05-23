@@ -1,9 +1,9 @@
 # ♥️ Heart Button ♥️
 
 [![CI Status](http://img.shields.io/travis/darquro/heart-button.svg?style=flat)](https://travis-ci.org/darquro/heart-button)
-[![Version](https://img.shields.io/cocoapods/v/HeartButton.svg?style=flat)](http://cocoapods.org/pods/HeartButton)
-[![License](https://img.shields.io/cocoapods/l/HeartButton.svg?style=flat)](http://cocoapods.org/pods/HeartButton)
-[![Platform](https://img.shields.io/cocoapods/p/HeartButton.svg?style=flat)](http://cocoapods.org/pods/HeartButton)
+[![Version](https://img.shields.io/cocoapods/v/HeartButton.svg?style=flat)](https://cocoapods.org/pods/HeartButton)
+[![License](https://img.shields.io/cocoapods/l/HeartButton.svg?style=flat)](https://cocoapods.org/pods/HeartButton)
+[![Platform](https://img.shields.io/cocoapods/p/HeartButton.svg?style=flat)](https://cocoapods.org/pods/HeartButton)
 
 Animating Heart button, that was inspired by Heart animation within [Instagram App](https://itunes.apple.com/app/instagram/id389801252).
 
@@ -91,4 +91,4 @@ darquro
 
 ## License
 
-VerticalAlignmentLabel is available under the MIT license. See the LICENSE file for more info.
+HeartButton is available under the MIT license. See the LICENSE file for more info.
