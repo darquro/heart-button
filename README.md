@@ -51,7 +51,7 @@ Or You can change it programmatically.
 
 | property | type | default |
 |----|----|----|
-| offLineWidth | CGFloat | 3.0 |
+| offLineWidth | CGFloat | 2.0 |
 | offLineColor | UIColor | UIColor.black |
 | offFillColor | UIColor | UIColor.clear |
 | onLineWidth  | CGFloat | 0 |
