@@ -17,7 +17,6 @@
 		B0B1CBEC20A5604300A6CF1F /* HeartButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B1CBC820A55FBE00A6CF1F /* HeartButton.framework */; };
 		B0B1CBED20A5604300A6CF1F /* HeartButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0B1CBC820A55FBE00A6CF1F /* HeartButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B0B1CBF220A5605900A6CF1F /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B1CBF120A5605900A6CF1F /* HeartButton.swift */; };
-		B0B1CBF420A5681A00A6CF1F /* Int+Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B1CBF320A5681A00A6CF1F /* Int+Radians.swift */; };
 		B0B1CBF720A5690200A6CF1F /* UIBezierPath+HeartShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B1CBF620A5690200A6CF1F /* UIBezierPath+HeartShape.swift */; };
 		B0B1CBFC20A56BA100A6CF1F /* CASpringAnimation+ExpandScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B1CBFB20A56BA100A6CF1F /* CASpringAnimation+ExpandScale.swift */; };
 		B0B1CBFF20A5731B00A6CF1F /* CAShapeLayer+HeartShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B1CBFE20A5731B00A6CF1F /* CAShapeLayer+HeartShape.swift */; };
@@ -61,7 +60,6 @@
 		B0B1CBE620A5602900A6CF1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0B1CBE820A5602900A6CF1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0B1CBF120A5605900A6CF1F /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
-		B0B1CBF320A5681A00A6CF1F /* Int+Radians.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Radians.swift"; sourceTree = "<group>"; };
 		B0B1CBF620A5690200A6CF1F /* UIBezierPath+HeartShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+HeartShape.swift"; sourceTree = "<group>"; };
 		B0B1CBFB20A56BA100A6CF1F /* CASpringAnimation+ExpandScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CASpringAnimation+ExpandScale.swift"; sourceTree = "<group>"; };
 		B0B1CBFE20A5731B00A6CF1F /* CAShapeLayer+HeartShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+HeartShape.swift"; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 				B0B1CBFD20A5711D00A6CF1F /* ShapeLayers */,
 				B0B1CBF520A568BF00A6CF1F /* ShapePaths */,
 				B0B1CBFA20A56A6D00A6CF1F /* Animations */,
-				B0B1CBF820A5694200A6CF1F /* Utils */,
 				B0B1CBCB20A55FBE00A6CF1F /* HeartButton.h */,
 				B0B1CBCC20A55FBE00A6CF1F /* Info.plist */,
 			);
@@ -139,14 +136,6 @@
 				B0B1CBF620A5690200A6CF1F /* UIBezierPath+HeartShape.swift */,
 			);
 			path = ShapePaths;
-			sourceTree = "<group>";
-		};
-		B0B1CBF820A5694200A6CF1F /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				B0B1CBF320A5681A00A6CF1F /* Int+Radians.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		B0B1CBF920A5697800A6CF1F /* Views */ = {
@@ -305,7 +294,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0B1CBF420A5681A00A6CF1F /* Int+Radians.swift in Sources */,
 				B0B1CC0120A5786300A6CF1F /* SwitchableButton.swift in Sources */,
 				B0B1CBFF20A5731B00A6CF1F /* CAShapeLayer+HeartShape.swift in Sources */,
 				B0B1CBFC20A56BA100A6CF1F /* CASpringAnimation+ExpandScale.swift in Sources */,
