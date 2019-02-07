@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/HeartButton.svg?style=flat)](https://cocoapods.org/pods/HeartButton)
 [![Platform](https://img.shields.io/cocoapods/p/HeartButton.svg?style=flat)](https://cocoapods.org/pods/HeartButton)
 
-Animating Heart button, that was inspired by Heart animation within [Instagram App](https://itunes.apple.com/app/instagram/id389801252).
+Animating Heart button inspired by animation within [Instagram App](https://itunes.apple.com/app/instagram/id389801252).
 
 <img src="./images/sample.gif" width="320px">
 
